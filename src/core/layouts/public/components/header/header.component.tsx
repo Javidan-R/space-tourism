@@ -6,22 +6,17 @@ import { useHeaderStyles } from './header.style';
 
 const HeaderComponent = () => {
   const classes = useHeaderStyles();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleMobileMenuToggle = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+ 
   return (
     <div className={classes.header}>
       <div className='row'>
         <div className='col-12 p-0'>
           <div className={classes.mobileHeader}>
-            <Link to='#' className={classes.mobileMenuIcon} onClick={handleMobileMenuToggle}>
+            <Link to='#' className={classes.mobileMenuIcon} >
               <FaBars />
             </Link>
           </div>
-          <HeaderNavbarComponent isMobileMenuOpen={isMobileMenuOpen} />
+          <HeaderNavbarComponent  />
         </div>
       </div>
     </div>

@@ -4,11 +4,7 @@ import { Routes } from 'router/routes';
 import { useHeaderNavbarStyles } from './header-navbar.style';
 import MenuComponent from '../menu/menu.component';
 import { Logo } from 'assets/images/icons/logo';
-
-interface HeaderNavbarProps {
-  isMobileMenuOpen: boolean;
-}
-const HeaderNavbarComponent: React.FC<HeaderNavbarProps> = ({ isMobileMenuOpen }) => {
+const HeaderNavbarComponent: React.FC = () => {
   const classes = useHeaderNavbarStyles();
   return (
     <div className={classes.headerNavbar}>
@@ -20,7 +16,7 @@ const HeaderNavbarComponent: React.FC<HeaderNavbarProps> = ({ isMobileMenuOpen }
         </div>
       </div>
       <div className='col-8'>
-        <MenuComponent isMobileMenuOpen={isMobileMenuOpen} />
+        <MenuComponent  />
       </div>
     </div>
   );

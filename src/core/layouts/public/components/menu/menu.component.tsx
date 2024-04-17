@@ -10,7 +10,7 @@ interface MenuComponentProps {
   isFooter?: boolean; 
 }
 
-const MenuComponent: React.FC<MenuComponentProps> = ({ isMobileMenuOpen, isFooter = false }) => {
+const MenuComponent: React.FC<MenuComponentProps> = ({ isFooter = false }) => {
   const classes = useMenuStyles();  
 
   const items = [
@@ -20,7 +20,7 @@ const MenuComponent: React.FC<MenuComponentProps> = ({ isMobileMenuOpen, isFoote
     { id: 4, name: 'Partnyorlar', link: Routes.partners },
     { id: 5, name: 'Əlaqə', link: Routes.contact },
   ];
-  const menuContainerClass = isFooter ? classes.footerMenu : (isMobileMenuOpen ? classes.open : classes.headerMenu);
+  const menuContainerClass = isFooter ? classes.footerMenu : classes.headerMenu;
   return (
     <div className={menuContainerClass}>
       {items.map(({ id, name, link }) => (
