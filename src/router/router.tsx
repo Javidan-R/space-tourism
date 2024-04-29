@@ -3,11 +3,9 @@ import { Routes } from './routes';
 import PublicComponent from 'core/layouts/public/public.component';
 import HomeComponent from 'pages/home/home.component';
 import NotFound from 'pages/not-found/notfound.component';
-import ContactComponent from 'pages/contact/contact.component';
-import AboutComponent from 'pages/about/about.component';
-import PartnersComponent from 'pages/partners/partners.component';
-import ProductsComponent from 'pages/products/products.componet';
-import ProductDetailedComponent from 'pages/product-detailed/product-detailed.component';
+import DestionationComponent from 'pages/destionation/destionation.component';
+import CrewComponent from 'pages/products/crew.componet';
+import TechnologyComponent from 'pages/technology/technology.component';
 
 
 const router = createBrowserRouter(
@@ -22,24 +20,16 @@ const router = createBrowserRouter(
           element: <HomeComponent />,
         },
         {
-          path: Routes.products,
-          element: <ProductsComponent />,
+          path: Routes.destination,
+          element: <DestionationComponent />,
         },
         {
-          path:`${ Routes.productDetailed}/:productId`,
-          element: <ProductDetailedComponent />,
+          path: Routes.crew,
+          element: <CrewComponent />,
         },
         {
-          path: Routes.partners,
-          element: <PartnersComponent />,
-        },
-        {
-          path: Routes.about,
-          element: <AboutComponent />,
-        },
-        {
-          path: Routes.contact,
-          element: <ContactComponent />,
+          path: Routes.technology,
+          element: <TechnologyComponent />,
         },
       ],
     },

@@ -1,19 +1,16 @@
 export enum Routes {
     default = '/',
     home = '/',
-    contact = '/contact',
-    about = '/about',
-    partners = '/partners',
-    products = '/products',
-    productDetailed = '/product-detailed',
+    destination = '/destination',
+    crew = '/crew',
+    technology = '/technology',
 }
 
 export enum Pages {
     home = 'Ana Səhifə',
-    contact = 'Əlaqə',
-    about = 'Haqqımızda',
-    partners = 'Partnyorlar',
-    products = 'Məhsullar',
+    destination = 'Təyinat',
+    crew = 'Ekipaj',
+    technology = 'Texnologiya',
 }
 
 export const goTo = (route: string, param: string | number) => {
