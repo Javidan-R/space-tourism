@@ -2,19 +2,12 @@ import { useHomeStyles } from './home.style';
 const HomeComponent = () => {
   const classes = useHomeStyles();
   return (
-    <div>
-      {/* <AboutHeading
-       
-      /> */}
-      <section className='px-40'>
-       
-      </section>
+    <section  className={classes.backgorundPage}>
+      <div className={classes.backgroundRight}>
 
-      {/*  */}
-      <section>
-     
-      </section>
-    </div>
+      </div>
+
+    </section>
   );
 };
 

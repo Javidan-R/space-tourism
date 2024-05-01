@@ -7,7 +7,6 @@ const styles = {
   public: {},
   content: {
     // minHeight: 'calc(100vd - 20px) !important',
-    padding: rem(20) + ' ' + rem(50) + ' ' + rem(0),
     transition: transition(),
   },
   active: { marginLeft: 0 },

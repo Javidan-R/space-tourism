@@ -4,6 +4,9 @@ import { useCallback, useMemo, useState } from 'react';
 import useLocalization from 'assets/lang';
 import { Routes } from 'router/routes';
 import classNames from 'classnames';
+import { Header } from 'antd/es/layout/layout';
+import { Menu } from 'antd';
+import { Logo } from 'assets/images/statics/logo';
 
 const HeaderComponent = () => {
     const classes = useHeaderStyles();
@@ -45,7 +48,7 @@ const HeaderComponent = () => {
    
     const headerClasses = useMemo(() => (
         classNames({
-            [classes.containerSm]:true,
+            [classes.header]:true,
             container:true,
         })
     ), [classes.containerSm]);
@@ -73,7 +76,18 @@ const HeaderComponent = () => {
     ), [classes.overlay, classes.overlayOpen, isMenuOpened]);
 
     return (
-        <div className={headerClasses}>
+        <div>
+            <Header>
+                <Logo/>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+        <Menu.Item key="1">Home</Menu.Item>
+        <Menu.Item key="2">About</Menu.Item>
+        <Menu.Item key="3">Services</Menu.Item>
+        <Menu.Item key="4">Contact</Menu.Item>
+      </Menu>
+            </Header>
+            
+            
            
             <div className={overLayClasses} onClick={openMenuHandler}>
 

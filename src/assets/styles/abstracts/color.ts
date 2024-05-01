@@ -1,5 +1,5 @@
 const colors = {
-  mainBg: '#fff',
+  mainBg: '#0B0D17',
   mainGreen: '#00b04e',
   mainColor: '#3E6F00',
   footerColor:'#f7f9f5',
@@ -12,6 +12,7 @@ const colors = {
   black: '#000',
   white:'#fff',
   textBlack:' #414D44',
+
 
   //tab
 

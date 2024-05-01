@@ -2,9 +2,24 @@ import colors from "assets/styles/abstracts/color";
 import fonts from "assets/styles/abstracts/fonts";
 import { rem } from "assets/styles/abstracts/functions";
 import { createUseStyles } from "react-jss";
+import second from '../../assets/images/statics/1.png';
+
 
  const styles = {
     // Ümumi stillər
+    backgorundPage: {
+      backgroundColor: 'transparent',
+      backgroundImage: `url(${second})`, 
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition:'center',
+      backgroundSize:'cover',
+      minWidth:'100vd',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight:'100vh',
+      margin:0,
+    },
     productDetails: {
     //   display: 'flex',
     //   flexDirection: 'column',
