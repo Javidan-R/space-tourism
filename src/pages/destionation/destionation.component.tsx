@@ -1,13 +1,12 @@
-import { useDestinationStyles } from './destionation.style';
 import { FC } from 'react';
-
-
-
- const DestinationComponent: FC = () => {
+import { useDestinationStyles } from './destionation.style';
+const DestinationComponent: FC = () => {
   const classes = useDestinationStyles();
   return (
-    <section>
-     
+    <section className={classes.destinationBackground}>
+      <div className={classes.destinationContainer}>
+
+      </div>
     </section>
   );
 };

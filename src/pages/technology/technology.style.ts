@@ -1,7 +1,7 @@
-import colors from "assets/styles/abstracts/color";
-import fonts from "assets/styles/abstracts/fonts";
-import { rem } from "assets/styles/abstracts/functions";
-import { createUseStyles } from "react-jss";
+import colors from 'assets/styles/abstracts/color';
+import fonts from 'assets/styles/abstracts/fonts';
+import { rem } from 'assets/styles/abstracts/functions';
+import { createUseStyles } from 'react-jss';
 import second from '../../assets/images/statics/1.png';
 
 
