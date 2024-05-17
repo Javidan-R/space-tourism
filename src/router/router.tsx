@@ -4,7 +4,7 @@ import PublicComponent from 'core/layouts/public/public.component';
 import HomeComponent from 'pages/home/home.component';
 import NotFound from 'pages/not-found/notfound.component';
 import DestionationComponent from 'pages/destionation/destionation.component';
-import CrewComponent from 'pages/products/crew.componet';
+import CrewComponent from 'pages/crew/crew.componet';
 import TechnologyComponent from 'pages/technology/technology.component';
 
 
