@@ -1,170 +1,136 @@
-import colors from "assets/styles/abstracts/color";
-import { createUseStyles } from "react-jss";
-// import first from "../../assets/images/statics/2.png";
-import second from "../../assets/images/statics/home-right.png";
-import first from "../../assets/images/statics/home-right.svg";
-
+import colors from 'assets/styles/abstracts/color';
+import { createUseStyles } from 'react-jss';
+import second from '../../assets/images/statics/home-right.png';
+import first from '../../assets/images/statics/home-right.svg';
+import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 
 export const useHomeStyles = createUseStyles({
   backgorundPage: {
     backgroundColor: colors.mainBg,
     backgroundImage: `url(${second})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition:'center',
-    backgroundSize: "cover",
-    minWidth: "100%",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    minHeight: "100vh",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minWidth: '100%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    minHeight: '100vh',
     margin: 0,
-    position: "relative",
+    position: 'relative',
     zIndex: 0,
+    [breakpoint(768)]:{
+      flexDirection:'column'
+    }
   },
   backgroundRight: {
     backgroundColor: colors.mainBg,
     backgroundImage: `url(${first})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    minWidth: "40%",
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    minHeight: "100vh",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minWidth: '40%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    minHeight: '100vh',
     margin: 0,
-    position: "absolute",
+    position: 'absolute',
     zIndex: 3,
-    transform: "rotate(0deg)",
+    [breakpoint(768)]: {
+      transform: 'rotate(90deg)', // Tablet görünüşdə döndürməyi çıxar
+      position: 'relative',
+      height:'100%',
+      overflowX:'hidden'
+      
+
+
+    },
   },
-  // title: {
-  //   fontSize: '24px',
-  //   fontWeight: 'bold',
-  //   color: '#FFFFFF',
-  //   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Add a text shadow for better readability
-  // },
-  // // Add more style classes as needed
-
-  // container: {
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   height: '100vh',
-  // },
-  // heading: {
-  //   fontSize: '2rem',
-  //   textAlign: 'center',
-  //   marginBottom: '1rem',
-  // },
-  // desc: {
-  //   fontSize: '1rem',
-  //   textAlign: 'center',
-  //   marginBottom: '2rem',
-  //   maxWidth: '80%',
-  // },
-  // buttons: {
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  // },
-  // button: {
-  //   backgroundColor: 'transparent',
-  //   border: '2px solid #fff',
-  //   color: '#fff',
-  //   padding: '0.5rem 2rem',
-  //   borderRadius: '0.5rem',
-  //   margin: '0 1rem',
-  //   cursor: 'pointer',
-  //   fontSize: '.9rem',
-  // },
-  // videoSection: {
-  //   padding: '40px',
-  //   backgroundColor: '#f5f5f5',
-  // },
-  // videoContainer: {
-  //   position: 'relative',
-  //   maxWidth: '100%',
-  //   width: '800px', // Adjust as needed
-  //   margin: 'auto',
-  // },
-  // videoOverlay: {
-  //   position: 'absolute',
-  //   top: 0,
-  //   left: 0,
-  //   width: '100%',
-  //   height: '100%',
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  //   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  //   zIndex: 1,
-  // },
-  // videoPlaceholder: {
-  //   maxWidth: '100%',
-  //   height: 'auto',
-  //   display: 'block',
-  // },
-  // playIcon: {
-  //   color: '#fff',
-  //   fontSize: '3rem',
-  // },
-  // videoPlayer: {
-  //   width: '100%',
-  //   height: 'auto',
-  //   zIndex: 0,
-  // },
-  // videoDescription: {
-  //   marginTop: '20px',
-  // },
-  // aboutUsSection: {
-  //   padding: '40px',
-  //   backgroundColor: '#ffffff',
-  // },
-  // aboutUsContent: {
-  //   display: 'flex',
-  //   justifyContent: 'space-between',
-  //   alignItems: 'center',
-  // },
-  // productsSection: {
-  //   padding: '40px',
-  //   backgroundColor: '#f5f5f5',
-  // },
-  // productsContent: {
-  //   display: 'flex',
-  //   justifyContent: 'space-between',
-  //   alignItems: 'center',
-  // },
-  // formSection: {
-  //   padding: '40px',
-  //   backgroundColor: '#ffffff',
-  // },
-  // formContent: {
-  //   maxWidth: '100%',
-  //   margin: 'auto',
-  // },
-  // form: {
-  //   marginTop: '20px',
-  //   '& label': {
-  //     display: 'block',
-  //     marginBottom: '5px',
-  //     color: colors.black,
-  //   },
-  //   '& input': {
-  //     width: '100%',
-  //     marginBottom: '10px',
-  //     padding: '10px',
-  //     border: `1px solid ${colors.black}`,
-  //     borderRadius: '5px',
-  //   },
-  //   '& input[type="checkbox"]': {
-  //     display: 'inline-block',
-  //     marginRight: '5px',
-  //   },
-  // },
-  // formRow: {
-  //   marginBottom: '20px',
-  // },
-
-  //
+  leftContent: {
+    padding: '20px',
+     [breakpoint(768)]: {
+      justifyContent: 'center', // Or any other styling you want for smaller screens
+    },
+  },
+  rightContent: {
+    padding: '20px',
+     [breakpoint(768)]: {
+      display: 'none', // Or any other styling you want for smaller screens
+    },
+  },
+  title: {
+    fontSize: rem(28),
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Add a text shadow for better readability
+  },
+  name: {
+    fontSize: rem(130),
+    margin: rem(20)+' '+rem(0)
+  },
+  contentContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    padding:rem(50),
+    [breakpoint(768)]: {
+      flexDirection: 'column', // Tablet görünüşdə sütun olaraq düzəlt
+      alignItems: 'flex-start', // Tablet görünüşdə sol tərəfə yaslan
+      marginTop: rem(100), // Üst boşluğu artır
+    },
+  },
+  textContainer: {
+    width: '50%', // Adjust as needed
+     [breakpoint(768)]: {
+      width: '100%', // Or any other styling you want for smaller screens
+    },
+  },
+  paragraph: {
+    width: '100%', // Adjust as needed
+     [breakpoint(768)]: {
+      width: '100%', // Or any other styling you want for smaller screens
+    },
+  },
+  imageContainer: {
+    padding:rem(50),
+    position:'relative',
+    [breakpoint(768)]: {
+      width: '100%', 
+    },
+  },
+  imageText:{
+    position:'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    fontSize: rem(28),
+    color: colors.black,
+    zIndex: 1,
+     [breakpoint(768)]: {
+      transform: 'rotate(270deg)', 
+      left:'35%',
+      top:'46%',
+      fontSize:rem(26)
+    },
+    [breakpoint(425)]: {
+      left:'35%',
+      top:'46%',
+      fontSize:rem(18)
+    },
+  },
+  explore:{
+    width:rem(250),
+    height:rem(250),
+    backgroundColor:colors.light,
+    borderRadius:'50%',
+    [breakpoint(768)]: {
+      width:rem(200),
+    height:rem(200),
+    },
+    [breakpoint(425)]: {
+      width:rem(100),
+    height:rem(100),
+    },
+  }
 });
